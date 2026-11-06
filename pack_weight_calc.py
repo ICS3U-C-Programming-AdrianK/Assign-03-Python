@@ -11,7 +11,7 @@ import constants
 
 def main():
     # get the package shape
-    pack_shape = input("Enter the shape of your package : ")
+    pack_shape = input("Enter the shape of your package (lowercase letters): ")
     if pack_shape == "rectangle":
         # Get the length of the package
         pack_length_str = input("Enter the length of your package (m): ")
@@ -80,10 +80,9 @@ def main():
                 print("The width of your package is invalid")
         except ValueError:
             print("The length of your package is invalid")
-        finally:
-            print("Thanks for playing !!")
     else:
         print("sorry , your package has to be in a rectangular shape")
+    print("Thanks for playing !!")
 
 
 if __name__ == "__main__":
