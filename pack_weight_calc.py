@@ -55,7 +55,7 @@ def main():
                                         pack_volume
                                     )
                                 )
-                                # check weight and volume eligibility 
+                                # check weight and volume eligibility
                                 if (
                                     pack_weight_float > constants.MAX_WEIGHT
                                     or pack_volume > constants.MAX_VOLUME
