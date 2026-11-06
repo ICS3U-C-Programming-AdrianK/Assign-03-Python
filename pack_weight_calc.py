@@ -1,4 +1,4 @@
-#!/usr/bun/env python3
+#!/usr/bin/env python3
 # Created by : Adrian student
 # Date : 06 th NOV 2026
 # This program asks the user for the weight of the package ,
@@ -34,9 +34,9 @@ def main():
                             "Enter the height of your package (m): "
                         )
                         try:
-                            # cast the weight to a float
+                            # cast the height to a float
                             pack_height_float = float(pack_height_str)
-                            # Check if all the users all the the measurements are positive
+                            # Check if all measurements are positive
                             if (
                                 pack_height_float > 0
                                 and pack_length_float > 0
@@ -61,21 +61,21 @@ def main():
                                 ):
                                     if pack_weight_float > constants.MAX_WEIGHT:
                                         print(
-                                            "your package is not acceptable because it is too heavy"
+                                            "Your package is not acceptable because it is too heavy"
                                         )
                                     else:
-                                        print("your package has an appropriate weight")
+                                        print("Your package has an appropriate weight")
                                     if pack_volume > constants.MAX_VOLUME:
                                         print(
-                                            "your package is not acceptable because it is too voluminous"
+                                            "Your package is not acceptable because it is too voluminous"
                                         )
                                     else:
-                                        print("your package has an appropriate volume")
+                                        print("Your package has an appropriate volume")
                                 else:
-                                    print("your package is acceptable")
+                                    print("Your package is acceptable")
                             else:
                                 print(
-                                    "wrong input , all measurements have to be greater than 0"
+                                    "Wrong input , all measurements have to be greater than 0"
                                 )
                         except ValueError:
                             print("The height of your package is invalid")
@@ -86,7 +86,7 @@ def main():
             except ValueError:
                 print("The length of your package is invalid")
         case _:
-            print("sorry , your package has to be in a rectangular shape")
+            print("Sorry , your package has to be in a rectangular shape")
     print("Thanks for playing !!")
 
 
