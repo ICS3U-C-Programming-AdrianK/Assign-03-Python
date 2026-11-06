@@ -55,16 +55,19 @@ def main():
                                         pack_volume
                                     )
                                 )
+                                # check weight and volume eligibility 
                                 if (
                                     pack_weight_float > constants.MAX_WEIGHT
                                     or pack_volume > constants.MAX_VOLUME
                                 ):
+                                    # check weight eligibility
                                     if pack_weight_float > constants.MAX_WEIGHT:
                                         print(
                                             "Your package is not acceptable because it is too heavy"
                                         )
                                     else:
                                         print("Your package has an appropriate weight")
+                                    # check volume eligibility
                                     if pack_volume > constants.MAX_VOLUME:
                                         print(
                                             "Your package is not acceptable because it is too voluminous"
