@@ -85,10 +85,9 @@ def main():
                     print("The width of your package is invalid")
             except ValueError:
                 print("The length of your package is invalid")
-            finally:
-                print("Thanks for playing !!")
         case _:
             print("sorry , your package has to be in a rectangular shape")
+    print("Thanks for playing !!")
 
 
 if __name__ == "__main__":
