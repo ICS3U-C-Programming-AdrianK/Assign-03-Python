@@ -12,14 +12,14 @@ import constants
 def main():
     # get the package shape
     pack_shape = input("Enter the shape of your package (lowercase letters): ")
-    if pack_shape == "rectangle":
+    if pack_shape == "rectangle" or pack_shape == "rectangular shape" or pack_shape == "rectangular":
         # Get the length of the package
-        pack_length_str = input("Enter the length of your package (m): ")
+        pack_length_str = input("Enter the length of your package (cm): ")
         try:
             # cast the length to a float
             pack_length_float = float(pack_length_str)
             # Get the width of the package
-            pack_width_str = input("Enter the width of your package (m): ")
+            pack_width_str = input("Enter the width of your package (cm): ")
             try:
                 # cast the width to a float
                 pack_width_float = float(pack_width_str)
@@ -29,7 +29,7 @@ def main():
                     # cast the weight to a float
                     pack_weight_float = float(pack_weight_str)
                     # Get the height of the package
-                    pack_height_str = input("Enter the height of your package (m): ")
+                    pack_height_str = input("Enter the height of your package (cm): ")
                     try:
                         # cast the height to a float
                         pack_height_float = float(pack_height_str)
@@ -44,9 +44,9 @@ def main():
                             pack_volume = (
                                 pack_length_float * pack_height_float * pack_width_float
                             )
-                            # Display volume
+                            # Display volume to 2 decimal places
                             print(
-                                "The volume of your package is : {:,.2f}m³".format(
+                                "The volume of your package is : {:,.2f}cm³".format(
                                     pack_volume
                                 )
                             )
@@ -56,32 +56,32 @@ def main():
                             ):
                                 if pack_weight_float > constants.MAX_WEIGHT:
                                     print(
-                                        "your package is not acceptable because it is too heavy"
+                                        "Your package is not acceptable because it is too heavy"
                                     )
                                 else:
-                                    print("your package has an appropriate weight")
+                                    print("Your package has an appropriate weight")
                                 if pack_volume > constants.MAX_VOLUME:
                                     print(
-                                        "your package is not acceptable because it is too voluminous"
+                                        "Your package is not acceptable because it is too voluminous"
                                     )
                                 else:
-                                    print("your package has an appropriate volume")
+                                    print("Your package has an appropriate volume")
                             else:
-                                print("your package is acceptable")
+                                print("Your package is acceptable")
                         else:
                             print(
-                                "wrong input , all measurements have to be greater than 0"
+                                "Wrong input , all measurements have to be greater than 0"
                             )
                     except ValueError:
-                        print("The height of your package is invalid")
+                        print("The height of your package is not a valid number")
                 except ValueError:
-                    print("The weight of your package is invalid")
+                    print("The weight of your package is not a valid number")
             except ValueError:
-                print("The width of your package is invalid")
+                print("The width of your package is not a valid number")
         except ValueError:
-            print("The length of your package is invalid")
+            print("The length of your package is not a valid number")
     else:
-        print("sorry , your package has to be in a rectangular shape")
+        print("Sorry , your package has to be in a rectangular shape")
     print("Thanks for playing !!")
 
 
