@@ -77,13 +77,13 @@ def main():
                                 "Wrong input , all measurements have to be greater than 0"
                             )
                     except ValueError:
-                        print("The height of your package is not a valid number")
+                        print(f"{pack_height_str} is not a number")
                 except ValueError:
-                    print("The weight of your package is not a valid number")
+                    print(f"{pack_weight_str} is not a number")
             except ValueError:
-                print("The width of your package is not a valid number")
+                print(f"{pack_width_str} is not a number")
         except ValueError:
-            print("The length of your package is not a valid number")
+            print(f"{pack_length_str} is not a number")
     else:
         print("Sorry , your package has to be in a rectangular shape")
     # finally statement
