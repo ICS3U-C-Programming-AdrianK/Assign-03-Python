@@ -12,7 +12,11 @@ import constants
 def main():
     # get the package shape
     pack_shape = input("Enter the shape of your package (lowercase letters): ")
-    if pack_shape == "rectangle" or pack_shape == "rectangular shape" or pack_shape == "rectangular":
+    if (
+        pack_shape == "rectangle"
+        or pack_shape == "rectangular shape"
+        or pack_shape == "rectangular"
+    ):
         # Get the length of the package
         pack_length_str = input("Enter the length of your package (cm): ")
         try:
