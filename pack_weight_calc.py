@@ -86,6 +86,7 @@ def main():
             print("The length of your package is not a valid number")
     else:
         print("Sorry , your package has to be in a rectangular shape")
+    # finally statement
     print("Thanks for playing !!")
 
 
